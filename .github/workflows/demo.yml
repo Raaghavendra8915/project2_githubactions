@@ -38,7 +38,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
            name : firstfile
-           path: path1
+           run-id: ${{ github.event.workflow_run.id }}
+           github-token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: output
         run: ls -lart
