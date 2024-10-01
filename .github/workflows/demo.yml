@@ -36,9 +36,7 @@ jobs:
     steps:
       - name: get build artifacts
         uses: actions/download-artifact@v3
-        with: 
-          name: firstfile
           
       - name: output
-        run: ls
+        run: ls -lart
           
