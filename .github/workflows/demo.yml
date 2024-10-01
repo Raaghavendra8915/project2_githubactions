@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v3.2.1-node20
         with:
           name: firstfile
-          path: /home/runner
+          path: path1
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -37,8 +37,7 @@ jobs:
       - name: get build artifacts for testing
         uses: actions/download-artifact@v4
         with: 
-          name: firstfile
-          path: /home/runner
+          name: my-artifact
           
       - name: output
         run: ls -lart
