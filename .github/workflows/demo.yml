@@ -29,13 +29,13 @@ jobs:
         uses: actions/upload-artifact@v3.2.1-node20
         with:
           name: firstfile
-          path: path1
+          path: /home/runner
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: get build artifacts for testing
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with: 
           name: firstfile
           path: /home/runner
