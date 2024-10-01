@@ -36,7 +36,8 @@ jobs:
     steps:
       - name: get build artifacts for testing
         uses: actions/download-artifact@v4
-     
+        with:
+           name : path1
           
       - name: output
         run: ls -lart
