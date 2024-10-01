@@ -25,6 +25,11 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
+      - name: upload rtifact
+        uses: actions/upload-artifact@v3.2.1-node20
+        with:
+          name: firstfile
+          path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
