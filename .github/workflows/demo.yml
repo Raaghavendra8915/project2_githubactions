@@ -35,11 +35,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get build artifacts for testing
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
-           name : firstfile
-           run-id: ${{ github.event.workflow_run.id }}
-           github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: my-artifact
+      - name: Display structure of downloaded files
+        run: ls -R
           
       - name: output
         run: ls -lart
