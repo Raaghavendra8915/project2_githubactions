@@ -37,7 +37,7 @@ jobs:
       - name: get build artifacts for testing
       - uses: actions/download-artifact@v4
         with:
-          name: my-artifact
+          name: firstfile
       - name: Display structure of downloaded files
         run: ls -R
           
