@@ -34,7 +34,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: get build artifacts
+      - name: get build artifacts for testing
         uses: actions/download-artifact@v3
           
       - name: output
